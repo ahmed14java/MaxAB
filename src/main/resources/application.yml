@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://db:3306/maxab?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    initialization-mode: always
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+reflectoring:
+  trace: true
