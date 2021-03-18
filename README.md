@@ -3,3 +3,10 @@
 # Database
 
 I used a MySQL database, can be changed easily in the application.yml for any other RDBMS database.
+# Getting started
+
+You need ava 8 installed.
+
+```bash
+mvn spring-boot:run
+```
