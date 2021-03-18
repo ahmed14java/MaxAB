@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UtilTest<T> {
-    /*
 
     public static <T> T jsonToObject(String json, Class<T> clazz) throws IOException
     {
@@ -30,7 +29,7 @@ public class UtilTest<T> {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         return mapper.writeValueAsString(object);
     }
-    */
+
     public static List<Book> getTestBooks(Integer count) {
         List<Book> books = new ArrayList<>();
         for (int i = 1; i <= count; i++)
