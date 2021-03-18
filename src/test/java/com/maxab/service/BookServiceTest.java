@@ -27,7 +27,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
-class BooServiceTest {
+class BookServiceTest {
 
     @Mock
     private BookRepository bookRepository;

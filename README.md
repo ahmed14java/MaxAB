@@ -25,7 +25,7 @@ docker-compose up
 # Run test
 The repository contains a lot of test cases to cover Both service and controller scenarios.
 ```bash
-mvn -Dtest=BooServiceTest test
+mvn -Dtest=BookServiceTest test
 ```
 ```bash
 mvn -Dtest=BookControllerTest test

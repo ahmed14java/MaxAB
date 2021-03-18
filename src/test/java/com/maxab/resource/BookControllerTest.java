@@ -1,5 +1,6 @@
 package com.maxab.resource;
 
+import com.maxab.errors.InvalidBookInputException;
 import com.maxab.model.Book;
 import com.maxab.service.BookService;
 import com.maxab.service.dto.BookDTO;
@@ -48,6 +49,13 @@ class BookControllerTest {
                                   .andReturn();
         int status = result.getResponse().getStatus();
         assertEquals(HttpStatus.CREATED.value(), status);
+    }
+    @Test
+    void createBookWithInvalidData(){
+        BookDTO bookDTO = UtilTest.createTestBookIncommingDTO();
+        bookDTO.setTitle(null);
+        when(bookingService.save(bookDTO)).thenThrow(InvalidBookInputException.class);
+        assertThrows(InvalidBookInputException.class,() -> bookingService.save(bookDTO));
     }
 
     @Test
