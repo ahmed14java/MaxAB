@@ -1,6 +1,8 @@
+server:
+  port: 8090
 spring:
   datasource:
-    url: jdbc:mysql://db:3306/maxab?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/maxab?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
     username: root
     password: root
     initialization-mode: always
@@ -12,3 +14,14 @@ spring:
       ddl-auto: create-drop
 reflectoring:
   trace: true
+keycloak:
+  enabled: true
+  auth-server-url: http://localhost:8080/auth
+  realm: maxab
+  resource: maxab-backend
+  credentials:
+    secret: 812462d6-4865-4083-afa1-9f3e2e401ff0
+  use-resource-role-mappings: true
+  bearer-only: true
+  ssl-required: external
+  principal-attribute: preferred_username
